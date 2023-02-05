@@ -4,7 +4,7 @@ import { alertStyles } from "./styles/alertStyles";
 
 export const BASE_URL =
   process.env.NODE_ENV === "production"
-    ? "khourybuildingpermits.com"
+    ? "https://khourypermit-api.herokuapp.com"
     : "http://localhost:8000";
 
 const AlertMessage = createContext();
