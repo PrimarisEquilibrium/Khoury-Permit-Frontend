@@ -14,7 +14,7 @@ function Gallery() {
 
   React.useEffect(() => {
     setStatus("loading");
-    fetch(`${BASE_URL}/api/project`)
+    fetch(`${BASE_URL}/api/project/`)
       .then((response) => {
         setStatus("success");
         return response.json();
@@ -26,7 +26,7 @@ function Gallery() {
   }, [selected]);
 
   React.useEffect(() => {
-    fetch(`${BASE_URL}/api/category`)
+    fetch(`${BASE_URL}/api/category/`)
       .then((response) => {
         return response.json();
       })

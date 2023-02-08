@@ -9,7 +9,7 @@ function GalleryLightBox({ displayImage, images, name }) {
   const imageList = images.map((item) => {
     return {
       ...item,
-      src: `http://127.0.0.1:8000${item.image}`,
+      src: item.image,
     };
   });
 

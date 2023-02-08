@@ -13,7 +13,7 @@ export async function sendEmail(name, email, message) {
       message: message,
     }),
   }).catch((error) => {
-    return false;
+    return false; 
   });
 
   if (rawResponse.ok) {

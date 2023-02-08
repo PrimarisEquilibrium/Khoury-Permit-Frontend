@@ -2,10 +2,12 @@ import React, { createContext, useContext, useState } from "react";
 import Alert from "@mui/material/Alert";
 import { alertStyles } from "./styles/alertStyles";
 
-export const BASE_URL =
-  process.env.NODE_ENV === "production"
-    ? "https://khourypermit-api.herokuapp.com"
-    : "http://localhost:8000";
+// export const BASE_URL =
+//   process.env.NODE_ENV === "production"
+//     ? "https://khourypermit-api.herokuapp.com"
+//     : "http://localhost:8000";
+
+export const BASE_URL = "https://khourypermit-api.herokuapp.com/"
 
 const AlertMessage = createContext();
 
