@@ -14,7 +14,7 @@ function App() {
         <Gallery />
       </div>
     </div>
-  );
+  )
 }
 
 export default App;
