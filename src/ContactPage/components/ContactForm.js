@@ -59,7 +59,7 @@ function ContactForm() {
       <div className="message-container">
         <textarea
           cols="30"
-          rows="10"
+          rows="8"
           className="message-field"
           placeholder="Type out your message..."
         ></textarea>

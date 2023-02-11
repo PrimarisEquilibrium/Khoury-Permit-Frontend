@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import LightBoxHeader from "./LightBoxHeader";
-import Lightbox from "react-spring-lightbox"
+import Lightbox from "react-spring-lightbox";
 
-function GalleryLightBox({ displayImage, images, name }) {
+function GalleryLightBox({ displayImage, images, name, category, categories }) {
   const [currentImageIndex, setCurrentIndex] = useState(0);
   const [isOpen, setOpen] = useState(false);
 
@@ -19,33 +19,37 @@ function GalleryLightBox({ displayImage, images, name }) {
   const gotoNext = () =>
     currentImageIndex + 1 < images.length &&
     setCurrentIndex(currentImageIndex + 1);
+  
+  const displayCategory = categories.filter(c => c.id === category).map(c => c.category)
 
   return (
     <div>
-      <img
-        className="gallery-img"
-        onClick={() => setOpen(true)}
-        src={displayImage}
-        alt=""
-      />
+      <div className="content">
+        <div className="content-overlay" onClick={() => setOpen(true)}></div>
+        <img className="gallery-img" src={displayImage} alt="gallery-img" />
+        <div className="content-details fadeIn-bottom">
+          <h3 className="content-title">{name}</h3>
+          <p className="content-text">{displayCategory}</p>
+        </div>
+      </div>
       {isOpen ? (
-          <Lightbox
-            isOpen={true}
-            onClose={() => setOpen(false)}
-            onPrev={gotoPrevious}
-            onNext={gotoNext}
-            images={imageList}
-            currentIndex={currentImageIndex}
-            renderHeader={() => (
-              <LightBoxHeader
-                images={images}
-                currentIndex={currentImageIndex}
-                setOpen={setOpen}
-                name={name}
-              />
-            )}
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}
-          />
+        <Lightbox
+          isOpen={true}
+          onClose={() => setOpen(false)}
+          onPrev={gotoPrevious}
+          onNext={gotoNext}
+          images={imageList}
+          currentIndex={currentImageIndex}
+          renderHeader={() => (
+            <LightBoxHeader
+              images={images}
+              currentIndex={currentImageIndex}
+              setOpen={setOpen}
+              name={name}
+            />
+          )}
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}
+        />
       ) : null}
     </div>
   );

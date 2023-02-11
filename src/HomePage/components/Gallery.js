@@ -53,7 +53,7 @@ function Gallery() {
         </div>
       );
     } else if (status === "success") {
-      return <GalleryItems data={projects} />;
+      return <GalleryItems data={projects} categories={categories}/>;
     }
   }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import GalleryLightBox from "./GalleryLightBox";
 
-function GalleryItems({ data }) {
+function GalleryItems({ data, categories }) {
   return (
     <React.Fragment>
       {Object.keys(data).map((item) => {
@@ -12,6 +12,8 @@ function GalleryItems({ data }) {
             displayImage={project.image}
             images={project.items}
             name={project.location}
+            category={project.category}
+            categories={categories}
           />
         );
       })}

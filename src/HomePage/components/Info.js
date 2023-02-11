@@ -11,7 +11,7 @@ function Info() {
           className="provide-img"
         />
         <div className="provide-text-container">
-          <div className="header">What We Provide</div>
+          <div className="provide-header">What We Provide</div>
           <div className="provide-subheader">Our Projects Include:</div>
           <ul className="items">
             <li>Additions and Renovations</li>
