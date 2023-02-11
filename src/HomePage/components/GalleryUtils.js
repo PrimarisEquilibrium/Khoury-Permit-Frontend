@@ -6,9 +6,6 @@ function GalleryItems({ data }) {
     <React.Fragment>
       {Object.keys(data).map((item) => {
         const project = data[item];
-
-        console.log(project)
-
         return (
           <GalleryLightBox
             key={project.id}
