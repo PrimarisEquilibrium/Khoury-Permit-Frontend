@@ -2,6 +2,7 @@ import Hero from "./components/Hero";
 import Navbar from "../components/Navbar"
 import Info from "./components/Info"
 import Gallery from "./components/Gallery"
+import Footer from "../components/Footer"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Info />
         <Gallery />
       </div>
+      <Footer />
     </div>
   )
 }

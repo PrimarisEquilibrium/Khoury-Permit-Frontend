@@ -2,7 +2,9 @@ import React from "react";
 import { AlertProvider } from "../utils";
 import Navbar from "../components/Navbar";
 import ContactForm from "./components/ContactForm";
+import Footer from "../components/Footer"
 import "./styles/contact.css";
+
 
 function ContactPage() {
   return (
@@ -37,6 +39,7 @@ function ContactPage() {
           </div>
         </div>
       </div>
+    <Footer />
     </div>
   );
 }
